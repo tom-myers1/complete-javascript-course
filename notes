@@ -1,0 +1,81 @@
+# for notes and things
+
+
+resources page
+
+http://codingheroes.io/resources
+
+section 2 file: file:///home/tom/repos/javascript/complete-javascript-course/complete-javascript-course-master/2-JS-basics/starter/index.html
+* setting up external .js file
+* definition
+  * js is a lightweight, cross-platform, object-oriented language
+  * low memory, simple syntax and features
+  * used across OS's
+  * based on objects
+
+* client side vs server side (node.js)
+* tons of frameworks/libraries like React and Angular based on js - master js, master (well at least use) them all
+
+* 3 core web technologies
+  * html
+  * css
+  * js
+
+  html = page content (words, images, buttons etc) ,<nouns eg paragraph>
+  css = style (font, size, colour etc) <adjectives eg paragraph is red>
+  js = what happens and when <verbs eg hide paragraph>
+
+
+* primitive data-types
+  * number - floating point for decimal and integers (instead of separate like int, bigint, dec etc etc)
+  * string - characters for text
+  * boolean - logical data - true or false
+  * undefined - not yet got a value (var t;)
+  * null - as in null
+
+dynamic typing - variables are automatically given data-types, if you assign to different type it will auto switch types
+
+in console and editor variables show up different colours - help understand what is what
+
+* comments
+  * // inline
+  * /*
+    multiple lines
+    */
+
+
+*** naming convention for variables
+  * always give meaningful names
+  * lower case first word upper case second (camel case)
+*** naming rules
+  * cannot start with or contain number or special character except $ or _
+  * cannot use reserved words (function, delete, if etc)
+
+
+  *********** line 32 script.js
+
+  age is automatically converted from number to string to output in console
+  works same for bool and undefined
+
+  line 41 - change age from number to string (don’t have to "var age", just "age" as its already a variable)
+
+
+* console.log = logs to console
+* alert = pop up box (page keeps loading until hit ok)
+* prompt = get data from input box (again page keeps loading...)
+
+**************** operators
+
+* maths = + - * /
+* logical = > < == !=
+* typeof = shows data-type of variable
+
+*** operator precedence
+look at http://codingheroes.io/resources and click operator precedence
+show order of execution!! very important
+
+maths happens before logical ie x + y > z even if you write z > x + y
+assignment ( = ) is (almost) last
+use good maths ie (x + y) / 3
+() have higher precedence
+can assign multiple variables to same thing x = y = 2-36;
