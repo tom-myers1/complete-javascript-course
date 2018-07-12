@@ -79,3 +79,10 @@ assignment ( = ) is (almost) last
 use good maths ie (x + y) / 3
 () have higher precedence
 can assign multiple variables to same thing x = y = 2-36;
+
+
+
+**************line 117 if/else
+same as normal
+
+no need to add === if already passing a bool ie var true = true; if (true) // rather than if (true === true)

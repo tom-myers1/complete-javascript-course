@@ -77,12 +77,11 @@ x ++; // rather than x += 1;
 
 
 
-
-/*****************************
+/******************************
 * CODING CHALLENGE 1
 */
-
 /*
+
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
 
 1. Store Mark's and John's mass and height in variables
@@ -96,7 +95,7 @@ var markHeight, markWeight, markBmi, johnHeight, johnWeight, johnBmi, markHeavie
 markHeight = 1.3; //m
 markWeight = 84; //kg
 
-johnHeight = 1.2; //m
+johnHeight = 1.8; //m
 johnWeight = 88; //kg
 
 function calBmi(height, weight){
@@ -111,4 +110,31 @@ johnBmi = calBmi(johnHeight, johnWeight);
 
 console.log('marks bim = ' + markBmi + ' and johns bmi = ' + johnBmi);
 markHeaviest = markBmi > johnBmi;
-console.log('is mark heaviest? ' + markHeaviest);
+// console.log('is mark heaviest? ' + markHeaviest); // should have used if/else codingheroes
+
+if (markHeaviest) {
+  console.log('mark is heavier than john');
+} else {
+  console.log('john is heavier than mark');
+}
+
+
+//////////////
+// if else statements
+/*
+var firstName = 'tom';
+var status = 'marriedish';
+
+if (status === 'single') {
+  console.log(firstName + ' is marriedish');
+} else {
+  console.log('nah');
+}
+
+var isMarried = false;
+if (isMarried) {  // alread a bool value so no need to compare
+  console.log(firstName + ' is marriedish');
+} else {
+  console.log('nah');
+}
+*/
