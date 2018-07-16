@@ -147,3 +147,7 @@ truthy: Anything else
 // == not strict can be different data types eg 23 == '23'  (number == string)
 
 best practice to use === where possible!!!
+
+
+****************** line 215
+****************** coding CHALLENGE 2

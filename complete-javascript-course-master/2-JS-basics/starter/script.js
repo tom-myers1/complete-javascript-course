@@ -78,8 +78,8 @@ x ++; // rather than x += 1;
 
 
 /******************************
-* CODING CHALLENGE 1
-*/
+ * CODING CHALLENGE 1
+ */
 /*
 
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
@@ -153,7 +153,7 @@ if (age < 18) {
   console.log('you old');
 }
 */
-
+/*
 /////////////////
 // ternary and switch
 
@@ -209,3 +209,65 @@ if (height2){
 // === vs ==
 // === strict, must be same data type and value
 // == not strict can be different data types eg 23 == '23'  (number == string)
+*/
+
+
+//coding CHALLENGE 2
+
+
+var mikeTeamScore1, mikeTeamScore2, mikeTeamScore3, mikeTeamAve, johnTeamScore1, johnTeamScore2, johnTeamScore3, johnTeamAve;
+
+mikeTeamScore1 = 10;
+mikeTeamScore2 = 10;
+mikeTeamScore3 = 10;
+
+johnTeamScore1 = 2;
+johnTeamScore2 = 2;
+johnTeamScore3 = 2;
+
+function calcAve(score1, score2, score3) {
+  var ave = (score1 + score2 + score3) / 3;
+  return ave;
+
+}
+
+mikeTeamAve = calcAve(mikeTeamScore1, mikeTeamScore2, mikeTeamScore3);
+johnTeamAve = calcAve(johnTeamScore1, johnTeamScore2, johnTeamScore3);
+
+console.log('mikes ave: ' + mikeTeamAve + ' and johns ave: ' + johnTeamAve);
+
+
+if (mikeTeamAve === johnTeamAve) {
+  console.log('it was a draw!! score was ' + mikeTeamAve + ' : ' + johnTeamAve);
+} else if (mikeTeamAve > johnTeamAve) {
+  console.log('mikes team won!! score was ' + mikeTeamAve + ' : ' + johnTeamAve);
+} else {
+  console.log('johns team won!!score was ' + johnTeamAve + ' : ' + mikeTeamAve);
+}
+
+var maryTeamScore1, maryTeamScore2, maryTeamScore3, maryTeamAve;
+
+maryTeamScore1 = 10;
+maryTeamScore2 = 10;
+maryTeamScore3 = 10;
+
+maryTeamAve = calcAve(maryTeamScore1, maryTeamScore2, maryTeamScore3);
+
+console.log('mikes ave: ' + mikeTeamAve + ' marys ave: ' + maryTeamAve + ' johns ave: ' + johnTeamAve);
+
+if (maryTeamAve === mikeTeamAve === johnTeamAve) {
+  console.log('its a 3 way tie!!! bonza');
+} else if (maryTeamAve > mikeTeamAve && maryTeamAve > johnTeamAve) {
+  console.log('marys team won!!');
+} else if (mikeTeamAve > maryTeamAve && mikeTeamAve > johnTeamAve) {
+  console.log('mikes team won!!');
+} else if (johnTeamAve > mikeTeamAve && johnTeamAve > maryTeamAve) {
+  console.log('johns team won!!');
+} else if (johnTeamAve === mikeTeamAve && johnTeamAve > maryTeamAve) {
+  console.log('johns team and marks team have tied for the lead');
+} else if (johnTeamAve === maryTeamAve && johnTeamAve > mikeTeamAve) {
+  console.log('johns team and marys team have tied for the lead');
+} else if (maryTeamAve === mikeTeamAve && maryTeamAve > johnTeamAve) {
+  console.log('johns team and marks team have tied for the lead');
+}
+  // this seems long winded, there has to be a better way
