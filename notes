@@ -86,3 +86,64 @@ can assign multiple variables to same thing x = y = 2-36;
 same as normal
 
 no need to add === if already passing a bool ie var true = true; if (true) // rather than if (true === true)
+
+
+********* boolean logic
+important to remember!!!
+
+AND   |  TRUE   |  FALSE
+-------------------
+TRUE  |  true   |  false
+-------------------
+FALSE |  false  |  false
+
+* AND (&&)  => true if ALL are true
+* OR (!!)   => true if ONE is true
+* NOT (!)   => inverts true/false
+
+OR    |  TRUE   |  FALSE
+-------------------
+TRUE  |  true   |  true
+-------------------
+FALSE |  true   |  false
+
+
+************* line 158 ternary and switch statements
+
+var drink = age >= 18 ? 'beer':'not beer';
+console.log(drink);
+
+
+*** switch
+
+eg
+var job = 'platform engineer';
+switch (job) {
+  case 'teacher':
+   console.log(name + ' is a teacher');
+  case 'driver':
+    console.log(name + ' is a driver');
+  case 'retired':
+    console.log(name + ' is retired');
+    break;
+  default:
+    console.log(name + ' is on the dole');
+}
+
+// requires a break to stop it trying to compare stuff
+and a default in case it doesnt match anything
+
+
+************* truthy and falsy
+for if else statements
+
+falsy : undefinded, null, 0, empty string '' and NaN
+truthy: Anything else
+
+
+// equality operators
+// === vs ==
+// === strict, must be same data type and value
+// == not strict can be different data types eg 23 == '23'  (number == string)
+
+best practice to use === where possible!!!
