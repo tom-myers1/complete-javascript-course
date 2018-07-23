@@ -151,3 +151,115 @@ best practice to use === where possible!!!
 
 ****************** line 215
 ****************** coding CHALLENGE 2
+
+did good... covered more outcomes than in solution and used a function to calculate ave scores
+
+
+*************** line 276 functions
+
+basic example similar to the one i used in the CHALLENGE
+
+D - dont
+R - repeat
+Y - yourself
+(where possible/logical)
+
+functions can call other functions - makes sense
+dont really need to return anything (but usually do)
+
+************** function statements and function expressions
+
+
+// function expression
+var job = function(job, firstName) {
+  switch(job) {
+      case 'teacher':
+      case 'driver':
+      case 'just stuff':
+
+  }
+
+  // function deceleration
+  function yearsTilRetire(year, firstName){
+    var age = calcAge(year);
+    var retirement = 65 - age; // assuming 65 is when you retired
+
+    if (retirement > 0){
+    console.log(firstName + ' retires in ' + retirement + ' years');
+  } else {
+    console.log(firstName + ' is already retired');
+  }
+  }
+
+
+// NOTE - if you return at any point in a function it stops
+processing the rest of the function
+ ie in switch statement you don’t need a break if its going to hit a return
+
+
+statements and expressions are a global concept in js
+
+expressions are pieces of code that always return a single value
+
+ie
+2 + 3
+typeof 23
+calling function age
+
+
+statements are a piece of code that just performs an action
+
+ie
+ if else
+ while
+
+
+
+***************** arrays
+collection of variables that can have different data types
+
+var names = ['tom', 'mark', 'jo']; // initiating array
+var years = new Array(1982, 1994, 1976);
+
+console.log(names[0]);
+console.log(names.length);
+
+can access elements by position ie 0 is first position, 1 is second ie names[2]
+can access attributes ie names.length
+
+can add ie names[5] = 'someone';
+
+if elements 3 and 4 don’t exist it will create empty elements
+
+to add to end of array use names[names.length] = 'mary'; //mutating array
+or
+by using names.push //more often used
+
+names.something are methods of the array
+
+.pop - removes last item
+.shift - removes first item
+.push - adds to end
+.unshift - add first item
+.reverse - reverses
+.indexof - retuns position of element in array
+
+// .indexOf
+
+useful for checking if sometihing is in an arrays
+
+var tom = ['tom', 'myers', 1982, false];
+
+console.log(tom.indexOf(1982)); // will return 2
+console.log(tom.indexOf(70)); // will return -1
+
+
+
+********line 372 CHALLENGE 3
+3 dinners £124, £48 and £265
+
+tip calculator - if bill is less then £50 tip 20%
+               - if bill is £50 to $100 tip 15%
+               - if bill is over £100 tip 10%
+return 2 arrays - all 3 tips
+                - all total payments (bill + tip)

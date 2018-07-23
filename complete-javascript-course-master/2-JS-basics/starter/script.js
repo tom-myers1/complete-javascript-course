@@ -214,7 +214,7 @@ if (height2){
 
 //coding CHALLENGE 2
 
-
+/*
 var mikeTeamScore1, mikeTeamScore2, mikeTeamScore3, mikeTeamAve, johnTeamScore1, johnTeamScore2, johnTeamScore3, johnTeamAve;
 
 mikeTeamScore1 = 10;
@@ -268,6 +268,139 @@ if (maryTeamAve === mikeTeamAve === johnTeamAve) {
 } else if (johnTeamAve === maryTeamAve && johnTeamAve > mikeTeamAve) {
   console.log('johns team and marys team have tied for the lead');
 } else if (maryTeamAve === mikeTeamAve && maryTeamAve > johnTeamAve) {
-  console.log('johns team and marks team have tied for the lead');
+  console.log('marys team and marks team have tied for the lead');
 }
   // this seems long winded, there has to be a better way
+*/ // did pretty much the same butcovered more cases than in solution ++
+
+// functions
+
+// basically using what i did above as example
+
+/*
+function calcAge(birthYear){
+    return 2018 - birthYear;
+}
+
+var ageTom = calcAge(1982);
+var ageTim = calcAge(1983);
+var ageTam = calcAge(1984);
+var ageTem = calcAge(1985);
+console.log(ageTom, ageTam, ageTem, ageTim);
+
+function yearsTilRetire(year, firstName){
+  var age = calcAge(year);
+  var retirement = 65 - age; // assuming 65 is when you retired
+
+  if (retirement > 0){
+  console.log(firstName + ' retires in ' + retirement + ' years');
+} else {
+  console.log(firstName + ' is already retired');
+}
+}
+
+yearsTilRetire(1990, 'john');
+yearsTilRetire(1991, 'jim');
+yearsTilRetire(1992, 'tom');
+*/
+
+// function statements and function expressions
+/*
+// function expression
+var job = function(job, firstName) {
+  switch (job) {
+    case 'teacher':
+      return firstName + ' is a teacher';
+    case 'driver':
+      return firstName + ' is a driver';
+    case 'just stuff':
+      return firstName + ' does stuff';
+    default:
+      return firstName + ' does somthing else';
+
+  }
+
+}
+
+console.log(job('driver', 'tom'));
+console.log(job('nothing', 'tim'));
+console.log(job('just stuff', 'jim'));
+
+*/
+
+
+// arrays
+
+//arrays are 0 based - first element is 0 then second is 1
+// can call them different ways
+//var names = ['tom', 'mark', 'jo']; // usually used
+//var years = new Array(1982, 1994, 1976);
+
+//console.log(names[0]);
+//console.log(names.length);
+/*
+names[1] = 'ben';
+names[5] = 'mary';
+console.log(names);
+
+
+
+var tom = ['tom', 'myers', 1982, false];
+/*
+tom.push('black')
+console.log(tom);
+tom.unshift('mr.')
+console.log(tom);
+tom.reverse();
+console.log(tom);
+tom.pop();
+console.log(tom);
+tom.pop();
+console.log(tom);
+tom.shift();
+console.log(tom);
+
+console.log(tom.indexOf(1982));
+console.log(tom.indexOf(70));
+
+console.log(tom.indexOf('tom'));
+var tom = tom.indexOf('tom') === -1 ? 'tom is not tom' : 'tom is tom';
+console.log(tom);
+*/
+
+
+// CHALLENGE 3
+/*
+3 dinners £124, £48 and £265
+
+tip calculator - if bill is less then £50 tip 20%
+               - if bill is £50 to $100 tip 15%
+               - if bill is over £100 tip 10%
+return 2 arrays - all 3 tips
+                - all total payments (bill + tip)
+*/
+
+var bills = [124, 48, 265];
+
+var tips = [];
+var totals = [];
+
+function calcTips(bill) {
+  var tip;
+  if (bill < 50) {
+    tip = (bill * 0.2);
+  } else if (bill >= 50 && bill <= 150) {
+    tip = (bill * 0.15);
+  } else {
+    tip = (bill * 0.1);
+  }
+ return tip;
+}
+
+for (var i = 0; i < bills.length; i++) {
+var tip = calcTips(bills[i]);
+tips.push(tip);
+totals.push(bills[i] + tip);
+}
+
+console.log('tips = ' + tips + ' totals = ' + totals);
