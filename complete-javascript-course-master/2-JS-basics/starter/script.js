@@ -379,7 +379,7 @@ tip calculator - if bill is less then £50 tip 20%
 return 2 arrays - all 3 tips
                 - all total payments (bill + tip)
 */
-
+/*
 var bills = [124, 48, 265];
 
 var tips = [];
@@ -404,3 +404,188 @@ totals.push(bills[i] + tip);
 }
 
 console.log('tips = ' + tips + ' totals = ' + totals);
+*/
+/*
+
+var tom = {
+  firstName: 'tom',
+  lastName: 'myers',
+  age: 36,
+  family:['mza','gza','ben','kate'],
+  job: 'stuff',
+  yearBorn: 1982,
+  calcAge: function(birthYear) {
+    this.age =  2018 - this.birthYear;
+  }
+};
+
+console.log(tom.calcAge());
+*/
+/*
+// code challenge 4
+
+var mark = {
+  name: 'mark',
+  mass: 78, //kg
+  height: 1.84, //meters
+  calcBmi: function() {
+    this.bmi = this.mass / (this.height * this.height);
+  }
+}
+
+var john = {
+  name: 'john',
+  mass: 99, //kg
+  height: 1.92, //meters
+  calcBmi: function() {
+    this.bmi = this.mass / (this.height * this.height);
+  }
+}
+
+mark.calcBmi();
+john.calcBmi();
+
+if (mark.bmi === john.bmi) {
+  console.log('they have equal bmi: ' + john.bmi);
+} else if (mark.bmi > john.bmi) {
+  console.log('mark has the greater bmi: ' + mark.bmi + ' > ' + john.bmi);
+} else {
+  console.log('john has th greater bmi: ' + john.bmi + ' > ' + mark.bmi);
+}
+*/
+
+// did exactly same as in example
+// bare in mind that this isnt following DRY principal - but that will come later
+// could have done the if like -- if (john.calcBmi() > mark.calcBmi())
+// if you return from the method
+
+/*
+// loops and iterations
+var nums = [1,2,3,4,5,6,7,8,9,10]
+
+for (var i = 0; i < nums.length; i++) {
+  console.log(nums[i]);
+}
+
+var i = 0;
+while (i < nums.length) {
+  console.log(nums[i]);
+  i++
+}
+*/
+
+// continue + break
+// break stops loops
+// continue stops current iteration and continues with loop
+
+/*
+
+var nums = [1,2,3,4,false,6,7,true,9,'tom']
+/*
+for (var i = 0; i < nums.length; i++) {
+  if (typeof nums[i] !== 'number') continue;
+  console.log(nums[i]);
+}
+
+for (var i = 0; i < nums.length; i++) {
+  if (typeof nums[i] !== 'number') break;
+  console.log(nums[i]);
+}
+*/
+/*
+for (var i = nums.length - 1; i >= 0; i--) {
+  //if (typeof nums[i] !== 'number') continue;
+  console.log(nums[i]);
+}
+*/
+
+
+// code challenge 5
+// advanced tip collection
+
+var johnTips = [];
+var johnTotals = [];
+
+var johnBills = {
+  bills: [124, 48, 268, 180, 42],
+  calcTips: function() {
+    console.log(this.bills.length);
+    for (var i = 0; i < this.bills.length; i++) {
+    var bill = this.bills[i];
+    var tip;
+      if (bill < 50) {
+        tip = (bill * 0.2);
+      } else if (bill >= 50 && bill <= 200) {
+        tip = (bill * 0.15);
+      } else {
+        tip = (bill * 0.1);
+      }
+
+      tip = Math.round(tip);
+      console.log(tip, bill);
+      johnTips.push(tip);
+      johnTotals.push(tip + bill);
+    }
+
+
+  }
+};
+johnBills.calcTips();
+
+console.log('tips = ' + johnTips + ' and totals = ' + johnTotals);
+
+var markTips = [];
+var markTotals = [];
+
+var markBills = {
+  bills: [77, 375, 110, 45],
+  calcTips: function() {
+    console.log(this.bills.length);
+    for (var i = 0; i < this.bills.length; i++) {
+    var bill = this.bills[i];
+    var tip;
+    if (bill < 100) {
+      tip = (bill * 0.2);
+    } else if (bill >= 100 && bill <= 300) {
+      tip = (bill * 0.1);
+    } else {
+      tip = (bill * 0.25);
+    }
+      tip = Math.round(tip);
+      console.log(tip, bill);
+      markTips.push(tip);
+      markTotals.push(tip + bill);
+    }
+
+
+  }
+};
+markBills.calcTips();
+
+console.log('tips = ' + markTips + ' and totals = ' + markTotals);
+
+function calcAvg(tips) {
+  var tipsTotal = 0;
+for (var i = 0; i < tips.length; i++) {
+console.log(tips[i]);
+tipsTotal += tips[i];
+
+};
+console.log(tipsTotal);
+var tipsAve = (tipsTotal / tips.length);
+console.log(tipsAve);
+return tipsAve;
+}
+
+var marksAve = calcAvg(markTips);
+var johnsAve = calcAvg(johnTips);
+
+console.log('marks ave = ' + marksAve + ' johns ave = ' + johnsAve);
+if (marksAve > johnsAve) {
+  console.log('mark paid more in tips');
+
+} else if (johnsAve > marksAve) {
+  console.log('john paid more in tips');
+} else {
+  console.log('they paid the same in tips');
+}

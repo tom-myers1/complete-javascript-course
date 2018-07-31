@@ -1,0 +1,88 @@
+file:///home/tom/repos/javascript/complete-javascript-course/complete-javascript-course-master/2-JS-basics/starter/index.html
+
+
+
+---------------------
+-- objects and properties
+
+objects - key-value pair
+var tom = {
+name: 'tom',
+age: 'old'
+}
+
+can contain different data types + arrays also other objects etc
+
+can be accessed by . notation ie tom.name tom.age
+or by [] ie tom['name']
+
+can be mutated by tom.name = 'bob';
+
+----------------------
+-- objects and methods
+
+methods are object functions
+
+var tom = {
+name: 'tom',
+yearBorn: 1982,
+age: function(birthYear) {
+return 2018 - birthYear;
+}
+
+}
+
+called by tom.age(1982)
+
+
+when dealing with objects you can use this.age or this.name etc
+
+
+line 425 - code challenge 4
+
+did pretty much the same as in the example
+
+
+------------------------
+-- loops and iterations
+
+for + while
+
+var nums = [1,2,3,4,5,6,7,8,9,10]
+
+for (var i = 0; i < nums.length; i++) {
+  console.log(nums[i]);
+}
+
+var i = 0;
+while (i < nums.length) {
+  console.log(nums[i]);
+  i++
+}
+
+// continue + break
+// break stops loops
+// continue stops current iteration and continues with loop
+
+
+var nums = [1,2,3,4,false,6,7,true,9,'tom']
+/*
+for (var i = 0; i < nums.length; i++) {
+  if (typeof nums[i] !== 'number') continue;
+  console.log(nums[i]);
+}
+
+for (var i = 0; i < nums.length; i++) {
+  if (typeof nums[i] !== 'number') break;
+  console.log(nums[i]);
+}
+*/
+
+// looping backwards
+for (var i = nums.length - 1; i >= 0; i--) {
+  //if (typeof nums[i] !== 'number') continue;
+  console.log(nums[i]);
+}
+
+
+line 503 - code challenge 5
