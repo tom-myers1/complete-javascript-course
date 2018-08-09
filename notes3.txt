@@ -1,0 +1,46 @@
+Sections 3
+
+// what happens to the code
+
+the code you write needs an engine (ie browser or server env in node.js case)
+
+the engine uses a parser to ensure the syntax is correct, then converts to
+machine code before running
+
+this is a basic over view, plenty of other stuff happens behind the scenes and
+different engines deal with things in different ways
+
+
+//////////////////////////////
+
+// execution context and execution stack
+
+all code needs to run in an environment or context
+the default is the global context
+-- all code that is not inside a function
+-- code associated with the global object
+
+when you call a function it gets its own execution context
+and when that function is complete (ie returns) the context is removed from the
+stack
+
+
+-- execution context has 3 properties
+  -- variable objects
+    -- contains function arguments, inner variable declarations and function declarations
+  -- scope chain
+    -- contains the current variable object and the object of all its parents
+  -- 'this' variable
+
+this happens in 2 phases, creation and execution
+
+-- creating the variable objects
+  -- the argument object is created containing all the args passed to the function
+  -- code is scanned for functions declarations and for each a property is created pointing to that functions
+  -- code is scanned for variable declarations and for each a property is created and set to undefined
+last 2 steps are known as hoisting
+
+
+// hoisting in practice
+
+hoisting only works for function declaration and not for function expression
