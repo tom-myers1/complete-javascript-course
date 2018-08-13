@@ -1,0 +1,7 @@
+what is the dom?
+
+document object model
+-- structured representation of an HTML document
+-- used to connect web pages to scripts
+-- for each HTML box there is an object in the dom that can be
+  accessed and interacted with
