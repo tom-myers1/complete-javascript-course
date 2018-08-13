@@ -5,3 +5,34 @@ document object model
 -- used to connect web pages to scripts
 -- for each HTML box there is an object in the dom that can be
   accessed and interacted with
+
+// events
+-- notifications that are sent to code when something happens ie scroll down, click button etc
+-- processed only when the execution stack is empty
+
+
+// callback function
+
+function btn() {
+// do stuff
+}
+
+document.querySelector('.btn-roll').addEventListener('click', btn);
+
+-- a function that is called by another function
+
+// anonymous function
+
+document.querySelector('.btn-roll').addEventListener('click', function () {
+// do stuff
+
+}
+
+);
+
+
+// 2 ways to get elements
+
+document.querySelector('.dice').style.display = 'none';
+
+document.getElementById('') // faster
